@@ -58,7 +58,7 @@ do
 	C=$((C+1));
 	scp compare2sra.sh search_sra.sh setup.sh $IP:
 	ssh $IP "~/setup.sh"
-	ssh $IP "~/search_sra.sh x00"
+	ssh $IP "~/search_sra.sh x0$C"
 done
 ```
 
