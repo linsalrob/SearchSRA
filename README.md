@@ -10,7 +10,7 @@ Before you start, you will need:
 
 1. A fasta file with the sequences that you want to search. Mine is called `genomes.fasta`
 2. A list of SRA IDs that you want to search against. This easiest way to get this is to grep for WGS in [SRA_Metagenome_Types.txt](https://raw.githubusercontent.com/linsalrob/partie/master/SRA_Metagenome_Types.txt) from [PARTIE](https://github.com/linsalrob/partie). Currently this list is ~67,429 SRA files. Note that for this code, we just want the ID, and not the WGS part, so you may need to use: `grep WGS SRA_Metagenome_Types.txt | cut -f 1` to get just the ids.
-3. A website where you can hose the data.
+3. A website where you can house the data.
 4. The setup.sh, compare2sra.sh, and search_sra.sh from here.
 
 We start by splitting the SRA ids file into as many files as you have Jetstream instances. For example, if you have 67,429 lines in your file and 10 instances, I would use: `split -l 6743 -d sra.ids`. This will give you 10 files x00, x01, x02, ... x09. 
@@ -49,11 +49,11 @@ ssh $IP "~/search_sra.sh genomes.fasta x00"
 
 Note that in the last line: genomes.fasta is the name of my fasta file (1, above). x00 is the name of the file from the split command.
 
-If that completes successfully we can run the code for the other nodes. Again, correct the IP addresses here:
+If that completes successfully we can run the code for the other nodes. I have a file that I call `ips.txt` which has one IP address per line.
 
 ```
 C=0; 
-for IP in 149.165.0.0 149.165.0.0 149.165.0.0 149.165.0.0 149.165.0.0 149.165.0.0 149.165.0.0 149.165.0.0; 
+for IP in $(cat ips.txt)
 do
 	C=$((C+1));
 	scp compare2sra.sh search_sra.sh setup.sh $IP:
@@ -67,7 +67,7 @@ done
 Once this is run, we just need to get the results. This code will access all the machines and synchronize the results into the search folder. You can run this as often as you like.
 
 ```
-for IP in 149.165.0.0 149.165.0.0 149.165.0.0 149.165.0.0 149.165.0.0 149.165.0.0 149.165.0.0 149.165.0.0; 
+for IP in $(cat ips.txt)
 do 
 	OUT=$(rsync -avz $IP:search/ search/);
 	COUNT=$(echo $OUT| sed -e 's/bam /bam\n/g' | wc -l)
