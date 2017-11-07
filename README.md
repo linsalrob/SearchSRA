@@ -4,6 +4,11 @@ We're using the [Jetstream cloud](https://use.jetstream-cloud.org/) to search th
 
 This repository contains some of the scripts that we use and introductions to get started. It is not a comprehensive repository as we are still in a pre-alpha development mode with the code. I'm looking forward to deleting this line at some point in the future.
 
+## Citing this repository
+
+You can access this repository at [Zeonodo](http://www.zenodo.org/) with DOI:10.5281/zenodo.1043562 [![DOI](https://www.zenodo.org/badge/90091634.svg)](https://www.zenodo.org/badge/latestdoi/90091634)
+
+
 ## Getting Started
 
 Before you can start using this code you will need an [XSEDE](https://www.xsede.org/web/site/for-users/getting-started) account and an allocation that allows you to use JetStream. If you are interested in going down this road, shoot [Rob](https://edwards.sdsu.edu/research/) an email and he'll help you get going. 
