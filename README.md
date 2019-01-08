@@ -21,7 +21,7 @@ Don't clone this repository until you get the allocation set up!
 Before you start, you will need:
 
 1. A fasta file with the sequences that you want to search. Mine is called `genomes.fasta`
-2. A list of SRA IDs that you want to search against. This easiest way to get this is to grep for WGS in [SRA_Metagenome_Types.txt](https://raw.githubusercontent.com/linsalrob/partie/master/SRA_Metagenome_Types.txt) from [PARTIE](https://github.com/linsalrob/partie). Currently this list is ~67,429 SRA files. Note that for this code, we just want the ID, and not the WGS part, so you may need to use: `grep WGS SRA_Metagenome_Types.txt | cut -f 1` to get just the ids.
+2. A list of SRA IDs that you want to search against. This easiest way to get this is to grep for WGS in [SRA_Metagenome_Types.tsv](https://raw.githubusercontent.com/linsalrob/partie/master/SRA_Metagenome_Types.tsv) from [PARTIE](https://github.com/linsalrob/partie). Currently this list is ~67,429 SRA files. Note that for this code, we just want the ID, and not the WGS part, so you may need to use: `grep WGS SRA_Metagenome_Types.txt | cut -f 1` to get just the ids.
 3. A website where you can house the data.
 4. The setup.sh, compare2sra.sh, and search_sra.sh from here.
 
