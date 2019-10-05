@@ -15,6 +15,6 @@ You will also need the reference file that you uploaded to searchSRA, and hopefu
 
 Before you begin, note that znvi'o is currently limited to ~2,000 samples in a single profile. You should check out this twitter thread for why:
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Didn&#39;t get the <a href="https://twitter.com/hashtag/anvio?src=hash&amp;ref_src=twsrc%5Etfw">#anvio</a> happy face today :( sqlite3.OperationalError: too many SQL variables<br><br>Probably shouldn&#39;t try to profile 11,000 bam files <a href="https://twitter.com/merenbey?ref_src=twsrc%5Etfw">@merenbey</a></p>&mdash; Rob Edwards (@linsalrob) <a href="https://twitter.com/linsalrob/status/1180242604958666752?ref_src=twsrc%5Etfw">October 4, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Didn&#39;t get the <a href="https://twitter.com/hashtag/anvio?src=hash&amp;ref_src=twsrc%5Etfw">#anvio</a> happy face today :( sqlite3.OperationalError: too many SQL variables<br><br>Probably shouldn&#39;t try to profile 11,000 bam files <a href="https://twitter.com/merenbey?ref_src=twsrc%5Etfw">@merenbey</a></p>&mdash; Rob Edwards (@linsalrob) <a href="https://twitter.com/linsalrob/status/1180242604958666752?ref_src=twsrc%5Etfw">October 4, 2019</a></blockquote> 
 
 We have mechanisms to [filter](DownstreamAnalysis.md) your results to reduce the number of files.
