@@ -39,8 +39,11 @@ python3.7 ~/GitHubs/SearchSRA/scripts/depth_histogram.py -d depth -o depth.hist
 Now we can normalize some of those files based on the maximum depth in a file. Here we limit it to just files with a maximum sequencing depth of 1,000 reads
 
 ``bash
-xargs -i python3.7 ~/GitHubs/SearchSRA/scripts/normalize_depth.py -f depth -o depth_normalized -m 1000
+python3.7 ~/GitHubs/SearchSRA/scripts/normalize_depth.py -d depth -o depth_normalized.1000 -m 1000
 ```
+
+
+
 
 
 
