@@ -1,3 +1,4 @@
+[![Edwards Lab](https://img.shields.io/badge/Bioinformatics-EdwardsLab-03A9F4)](https://edwards.sdsu.edu/research)
 # Searching the SRA
 
 We're using the [Jetstream cloud](https://use.jetstream-cloud.org/) to search the [Sequence Read Archive](https://www.ncbi.nlm.nih.gov/sra/). 
