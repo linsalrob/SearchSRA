@@ -57,7 +57,20 @@ for F in $(find ../depth_normalized.1000/ -type f -printf "%f\n"); do O=$(echo $
 cd ../
 ```
 
-_Alternately_ if you just have indexed those `.bam` files, you can proceed and use `anviprofiles/` in the subsequent directories.
+_Alternately_ if you have filtered the files by size, but not profiled all the bam files, you can create a new directory with symlinks like this:
+
+```bash
+mkdir bam.1000/
+cd bam.1000/
+for B in $(find ../depth_normalized.1000/ -type f -printf "%f\n" | sed -e 's/.tsv/.bam/'); do ln -s ../bam/$B ../bam/$B.bai .; done
+cd ..
+```
+
+Then you can go ahead and profile each of these:
+```bash
+find bam -type f -name \*bam -printf "%f\n" | sed -e 's/.bam//' | parallel anvi-profile -i mapping/{}.bam  -c X_fastidiosa.db -o anvi-profiles/{}
+```
+
 
 
 ### Merge the anvi'o profiles
